@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<hr styles:"border:2px solid black;">
+<p>
+  <strong>Message:</strong>
+  <%= @micropost.message %>
+</p>
+
+<p>
+
+  <strong>This post was made by:</strong>
+  <%= link_to @micropost.user.email, @micropost.user %>
+<hr styles:"border:2px solid black;">
+</p>
+
+<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
+<%= link_to 'Back', microposts_path %>

@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @user.street_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>Province:</strong>
+  <%= @user.province %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @user.postal_code %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @user.country %>
+</p>
+
+
+
+<h1>Posts</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Message</th> <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @user.microposts.each do |post| %>
+    <tr>
+      <td>
+        <%= post.message %>
+      </td>
+      <td>
+        <%= link_to "Post", post %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+
+  <%= link_to 'New Micropost', new_micropost_path %>
+</table>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
