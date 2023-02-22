@@ -225,6 +225,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   bootsnap (>= 1.1.0)
+  bundler (~> 2.1.4)
   byebug
   capybara (>= 2.15)
   chromedriver-helper
